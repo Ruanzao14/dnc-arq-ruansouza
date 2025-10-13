@@ -49,7 +49,7 @@ function ProjectsList () {
        if (savedFavProjects) {
             setFavProject(savedFavProjects)
        }
-    })
+    }, [projects])
 
     
     return (

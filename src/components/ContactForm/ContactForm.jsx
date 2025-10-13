@@ -32,14 +32,19 @@ function ContactForm() {
                 })
 
                 if (response.ok) {
-                    setFormSubmitted(true)
+                setFormSubmitted(true)
+                setFormData({
+                    name: '',
+                    email: '',
+                    message: ''
+                })
                 } else {
                     alert('Erro ao enviar!')
                 }
-            } catch (e) {
-                alert('Erro: ', e)
-            } finally {
-                setFormSubmitLoading(false)
+                } catch (e) {
+                    alert('Erro: ', e)
+                } finally {
+                    setFormSubmitLoading(false)
             }
         } 
     }
